@@ -5,7 +5,7 @@ Health inspector for Iceberg, Delta, and Hudi lakehouse tables. No Spark, no cat
 ## Install
 
 ```bash
-pip install git+https://github.com/yourname/lake-inspect
+pip install lake-inspect
 ```
 
 ## Usage
@@ -27,19 +27,23 @@ lake-inspect --path /path/to/table --format iceberg --output json --out-file rep
 ## What it checks
 
 **Iceberg**
-- Snapshot count -- too many slows query planning
-- Small files -- impacts read performance
-- Schema drift -- too many schema versions
-- Partition spec -- missing means full scans
+- Snapshot count: too many slows query planning
+- Small files: impacts read performance
+- Schema drift: too many schema versions
+- Partition spec: missing means full scans
 
 **Delta**
-- Commit count -- too many without checkpoint slows reads
+- Commit count: too many without checkpoint slows reads
 - Small files
 - Schema changes
 - Remove/add file ratio
 
 **Hudi**
-- Inflight commits -- stuck or failed writes
+- Inflight commits: stuck or failed writes
 - Commit count
 - Operation types (insert vs upsert)
-- Write sizes -- too small means unbatched writes
+- Write sizes: too small means unbatched writes
+
+## Requirements
+
+Python 3.8+

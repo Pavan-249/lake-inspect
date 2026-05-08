@@ -4,3 +4,5 @@ __pycache__/
 .DS_Store
 sample_tables/
 *.db
+dist/
+*.egg-info/
