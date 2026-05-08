@@ -1,0 +1,23 @@
+{
+  "format": "iceberg",
+  "path": "sample_tables/iceberg_table",
+  "findings": [
+    {
+      "level": "OK",
+      "message": "1 snapshot(s)"
+    },
+    {
+      "level": "WARN",
+      "message": "2/2 files under 10MB (100%). Avg: 0.09 MB."
+    },
+    {
+      "level": "OK",
+      "message": "1 schema version(s)"
+    },
+    {
+      "level": "OK",
+      "message": "Partitioned by: trip_date"
+    }
+  ],
+  "total_issues": 1
+}

@@ -1,0 +1,25 @@
+{
+  "operationType": "UPSERT",
+  "totalRecordsWritten": 3000,
+  "totalBytesWritten": 180083,
+  "partitionToWriteStats": {
+    "trip_date=2024-01-01": [
+      {
+        "fileId": "file-1-000",
+        "path": "sample_tables/iceberg_table/data/trip_date=2024-01-01/2565369498dd450a8894eb9a615622a1-0.parquet",
+        "totalWriteBytes": 173945,
+        "numWrites": 300,
+        "numUpdateWrites": 50
+      }
+    ],
+    "trip_date=2023-12-31": [
+      {
+        "fileId": "file-1-001",
+        "path": "sample_tables/iceberg_table/data/trip_date=2023-12-31/2565369498dd450a8894eb9a615622a1-0.parquet",
+        "totalWriteBytes": 6138,
+        "numWrites": 300,
+        "numUpdateWrites": 50
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "format-version": 2,
+  "table-uuid": "nyc-taxi-iceberg-001",
+  "last-updated-ms": 1778211452594,
+  "current-schema-id": 0,
+  "schemas": [
+    {
+      "schema-id": 0,
+      "fields": [
+        {
+          "id": 1,
+          "name": "tpep_pickup_datetime",
+          "type": "timestamptz"
+        },
+        {
+          "id": 2,
+          "name": "tpep_dropoff_datetime",
+          "type": "timestamptz"
+        },
+        {
+          "id": 3,
+          "name": "passenger_count",
+          "type": "double"
+        },
+        {
+          "id": 4,
+          "name": "trip_distance",
+          "type": "double"
+        },
+        {
+          "id": 5,
+          "name": "fare_amount",
+          "type": "double"
+        },
+        {
+          "id": 6,
+          "name": "tip_amount",
+          "type": "double"
+        },
+        {
+          "id": 7,
+          "name": "total_amount",
+          "type": "double"
+        }
+      ]
+    }
+  ],
+  "partition-specs": [
+    {
+      "spec-id": 0,
+      "fields": [
+        {
+          "source-id": 1,
+          "field-id": 1000,
+          "name": "trip_date",
+          "transform": "day"
+        }
+      ]
+    }
+  ],
+  "current-snapshot-id": 1,
+  "snapshots": [
+    {
+      "snapshot-id": 1,
+      "timestamp-ms": 1778211452594,
+      "summary": {
+        "operation": "append",
+        "total-records": "10000"
+      }
+    }
+  ]
+}
